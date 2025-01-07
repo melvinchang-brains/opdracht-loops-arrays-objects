@@ -1,135 +1,141 @@
 // ==========================================
-// Opdracht 1a
-// Schrijf een script dat voor iedere student in de array de score (het getal uit de property "score") in de terminal print
+// Opdracht 1. Het sturen van salaris-mailtjes is voor Bob een tijdrovende klus. Bovendien typt hij met twee vingers,
+// dus tegen de tijd dat hij alle mails verstuurd heeft, zijn al zijn collega's al langs zijn bureau gelopen om te vragen
+// wanneer ze hun salaris kunnen verwachten. Schrijf een script dat voor elke medewerker in de array een salarisbriefje
+// genereert en dit in de terminal print, zodat Bob dat snel kan kopiëren-en-plakken.
 
-const scores = [
-    {name: 'Max', score: 83, grade: null},
-    {name: 'David', score: 77, grade: null},
-    {name: 'Khalid', score: 92, grade: null},
-    {name: 'Rianne', score: 66, grade: null}
+// Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 medewerkers zou bevatten!
+// Tip: print eerst alleen de salarissen en voeg daarna pas de tekst toe
+
+// Verwachte uitkomsten:
+// 	'Beste Max, je salaris van €3200,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
+// 	'Beste Sophia, je salaris van €4000,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
+// 	'Beste Ali, je salaris van €2800,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
+// 	'Beste Nina, je salaris van €3500,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
+// 	'Beste Otis, je salaris van €2800,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
+// ==========================================
+
+const salaryDetails = [
+	{name: 'Max', salary: 3200},
+	{name: 'Sophia', salary: 2350},
+	{name: 'Ali', salary: 2800},
+	{name: 'Nina', salary: 3500},
+	{name: 'Otis', salary: 2800}
 ];
 
+// ==========================================
+// Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
+// voldoende vrije dagen over heeft voor de aanvraag. En dat gaat nog wel eens mis... Zorg ervoor dat het aantal vakantiedagen
+// dat iedere medewerker nog op kan nemen, in de terminal wordt geprint
+
+// Verwachte uitkomst:
+// 	'Max heeft nog 15 vakantiedagen over.',
+// 	'Sophia heeft nog 15 vakantiedagen over.',
+// 	'Ali heeft nog 2 vakantiedagen over.',
+// 	'Nina heeft nog 20 vakantiedagen over.',
+// 	'Otis heeft nog 18 vakantiedagen over.',
+// ==========================================
+
+const vacationDays = [
+	{name: 'Max', totalVacationDays: 25, usedVacationDays: 10},
+	{name: 'Sophia', totalVacationDays: 30, usedVacationDays: 15},
+	{name: 'Ali', totalVacationDays: 20, usedVacationDays: 18},
+	{name: 'Nina', totalVacationDays: 25, usedVacationDays: 5},
+	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
+];
+
+
+// ==========================================
+// Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
+// in de maand januari. Schrijf een script dat de lijst doorloopt en voor iedere medewerker die een opleiding in januari volgt,
+// de naam en de opleiding in de console wordt gelogt.
+
+// Verwachte uitkomsten:
+// Max: Leiderschapstraining
+// Ali: Communicatietraining
+// ==========================================
+
+const employeesInTraining = [
+	{name: 'Max', training: 'Leiderschapstraining', month: 'Januari'},
+	{name: 'Sophia', training: 'Projectmanagement', month: 'Februari'},
+	{name: 'Ali', training: 'Communicatietraining', month: 'Januari'},
+	{name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
+	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
+];
+
+
+
+// ==========================================
+// Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
+// naar percentages en toe te voegen aan de adminstratie. Schrijf een script dat de score van iedere medewerker in de
+// array omzet naar een salarisverhoging-percentage en dit in de terminal print. De percentages zijn als volgt:
+// - minder dan 60 = 0%
+// - 60 tot 69 = 2%
+// - 70 tot 89 = 3%,
+// - 90 tot 99 = 4%
+// - 100 = 6%
+
 // Verwachtte uitkomsten:
-// 83
-// 77
-// 92
-// 66
+// 3%
+// 3%
+// 4%
+// 2%
+// 6%
 // ==========================================
 
-
-
-
-
-// ==========================================
-// Opdracht 1b
-// Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
-// < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
-// Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
-// Verwachtte uitkomsten:
-// B
-// C
-// A
-// D
-// ==========================================
-
-
-
-
+const scores = [
+	{name: 'Max', score: 83, salaryIncrease: null},
+	{name: 'Sophia', score: 77, salaryIncrease: null},
+	{name: 'Ali', score: 92, salaryIncrease: null},
+	{name: 'Nina', score: 66, salaryIncrease: null},
+	{name: 'Otis', score: 100, salaryIncrease: null},
+];
 
 // ==========================================
-// Opdracht 1c
-// Breid je script uit door de bijbehorende letter op te slaan in de 'grade'-property van ieder student-object in de array.
+// Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
+
+// Verwachte uitkomst:
 // Vóór het script zie je de originele objecten,
 // Na jouw script zie je de aangepaste objecten:
 // console.log(scores) geeft: [
-//  { name: 'Max', score: 83, grade: 'B' },
-//  { name: 'David', score: 77, grade: 'C' },
-//  { name: 'Khalid', score: 92, grade: 'A' },
-//  { name: 'Rianne', score: 66, grade: 'D' }
-//  ];
+// 	{name: 'Max', score: 83, salaryIncrease: '3%'},
+// 	{name: 'Sophia', score: 77, salaryIncrease: '3%'},
+// 	{name: 'Ali', score: 92, salaryIncrease: '4%'},
+// 	{name: 'Nina', score: 66, salaryIncrease: '2%'},
+// 	{name: 'Otis', score: 100, salaryIncrease: '6%'},
+// ];
 // ==========================================
 
 
 
-
-
 // ==========================================
-// Opdracht 2
-// Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
+// Opdracht 5. Bob wil ervoor zorgen dat al zijn medewerkers een correct bedrijfs-e-mailadres hebben. Deze e-mailadressen moeten
+// automatisch worden gegenereerd ("Nee Bob, NIET met de hand!!") in het format: voornaam.achternaam@loop-it-solutions.nl
+// Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
 
-const NOVIEmployees = [
-    {firstName: 'Nova', lastName: 'Eeken'},
-    {firstName: 'Sam', lastName: 'Barnhoorn'},
-    {firstName: 'Tessa', lastName: 'Steur'},
-    {firstName: 'Mark', lastName: 'Rensen'},
-];
-
-// Bij NOVI horen de e-mailadressen altijd in het volgende format: voornaam.achternaam@novi.nl
+// Verwachte uitkomst:
 // Vóór het script zie je de originele objecten,
 // Na jouw script zie je de aangepaste objecten:
-// console.log(NOVIEmployees) geeft: [
-//   { firstName: 'Nova', lastName: 'Eeken', email: 'Nova.Eeken@novi.nl' },
-//   { firstName: 'Sam', lastName: 'Barnhoorn', email: 'Sam.Barnhoorn@novi.nl' },
-//   { firstName: 'Tessa', lastName: 'Steur', email: 'Tessa.Steur@novi.nl' },
-//   { firstName: 'Mark', lastName: 'Rensen', email: 'Mark.Rensen@novi.nl' },
-//  ];
-// ==========================================
-
-
-
-
-
-
-// Opdracht 2-BONUS
-// Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
-// ==========================================
-
-
-
-
-// ==========================================
-// Opdracht 3
-// Schrijf een script die de property "neighborhood" (de buurt) invult op basis van de postcode van onze studenten.
-// Tip: is het hier handig om if-else te gebruiken, of is er wellicht een betere manier?
-// 	3513 = Pijlsweerd
-//  3514 = Vogelenbuurt
-//  3512 = Binnenstad
-//  3531 = Lombok
-//  3572 = Wittevrouwen
-//  3581 = Oudwijk
-//  3583 = Schildersbuurt
-
-const students = [
-    {name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: null},
-    {name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: null},
-    {name: 'Dennis', city: 'Utrecht', zipCode: '3572', neighborhood: null},
-    {name: 'Robin', city: 'Utrecht', zipCode: '3581', neighborhood: null},
-    {name: 'Tanush', city: 'Utrecht', zipCode: '3512', neighborhood: null},
-    {name: 'Florien', city: 'Utrecht', zipCode: '3513', neighborhood: null},
-    {name: 'Larissa', city: 'Utrecht', zipCode: '3583', neighborhood: null},
-    {name: 'Marijn', city: 'Utrecht', zipCode: '3572', neighborhood: null},
-    {name: 'Jan', city: 'Utrecht', zipCode: '3531', neighborhood: null},
-    {name: 'Laura', city: 'Utrecht', zipCode: '3531', neighborhood: null},
-    {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
-    {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
-];
-
-// Verwachte uitkomsten:
-// [
-//     { name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: 'Pijlsweerd' },
-//     { name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Dennis', city: 'Utrecht', zipCode: '3572', neighborhood: 'Wittevrouwen' },
-//     { name: 'Robin', city: 'Utrecht', zipCode: '3581', neighborhood: 'Oudwijk' },
-//     { name: 'Tanush', city: 'Utrecht', zipCode: '3512', neighborhood: 'Binnenstad' },
-//     { name: 'Florien', city: 'Utrecht', zipCode: '3513', neighborhood: 'Pijlsweerd' },
-//     { name: 'Larissa', city: 'Utrecht', zipCode: '3583', neighborhood: 'Schildersbuurt' },
-//     { name: 'Marijn', city: 'Utrecht', zipCode: '3572', neighborhood: 'Wittevrouwen' },
-//     { name: 'Jan', city: 'Utrecht', zipCode: '3531', neighborhood: 'Lombok' },
-//     { name: 'Laura', city: 'Utrecht', zipCode: '3531', neighborhood: 'Lombok' },
-//     { name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: 'Vogelenbuurt' },
-//     { name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: 'Lombok' }
+// console.log(employees) geeft: [
+//     { firstName: 'Max', lastName: 'Janssen', email: 'Max.Janssen@loop-it-solutions.nl' },
+//     { firstName: 'Sophia', lastName: 'De Vries', email: 'Sophia.DeVries@loop-it-solutions.nl' },
+//     { firstName: 'Ali', lastName: 'Bakir', email: 'Ali.Bakir@loop-it-solutions.nl' },
+//     { firstName: 'Nina', lastName: 'Van den Berg', email: 'Nina.VanDenBerg@loop-it-solutions.nl' },
+//     { firstName: 'Otis', lastName: 'Kuiper', email: 'Otis.Kuiper@loop-it-solutions.nl' },
 // ]
 // ==========================================
 
+const employees = [
+	{firstName: 'Max', lastName: 'Janssen'},
+	{firstName: 'Sophia', lastName: 'De Vries'},
+	{firstName: 'Ali', lastName: 'Bakir'},
+	{firstName: 'Nina', lastName: 'Van den Berg'},
+	{firstName: 'Otis', lastName: 'Kuiper'},
+];
+
+// ==========================================
+// Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
+// Kun je je script aanpassen om dit voor elkaar te krijgen? Dit heb je nog niet geleerd, maar Google is your best friend...
+// ==========================================
 
 
