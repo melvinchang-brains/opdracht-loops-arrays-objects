@@ -22,7 +22,7 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // als de array wel 100 of 200 salarissen zou bevatten!
 
 // Verwachtte uitkomst:
-// console.log(salaries) geeft [3200, 2350, 2800, 3500, 2800] AANPASSEN
+// console.log(salaries) geeft [3360, 2467.5, 2940, 3675, 2940]
 // ==========================================
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
@@ -47,7 +47,7 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // Schrijf een script dat de verlof-uren aanpast op basis van deze bonus-regeling.
 
 // Verwachte uitkomst:
-// console.log(leaveHours) geeft [6, 9, 2, 7, 3]; AANPASSEN
+// console.log(leaveHours) geeft [12, 4.5, 4, 3.5, 1.5]
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];

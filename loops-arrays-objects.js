@@ -63,8 +63,6 @@ const employeesInTraining = [
 	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
 
-
-
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
 // naar percentages en toe te voegen aan de adminstratie. Schrijf een script dat de score van iedere medewerker in de
@@ -118,18 +116,18 @@ const scores = [
 // Na jouw script zie je de aangepaste objecten:
 // console.log(employees) geeft: [
 //     { firstName: 'Max', lastName: 'Janssen', email: 'Max.Janssen@loop-it-solutions.nl' },
-//     { firstName: 'Sophia', lastName: 'De Vries', email: 'Sophia.DeVries@loop-it-solutions.nl' },
+//     { firstName: 'Sophia', lastName: 'Vries', email: 'Sophia.Vries@loop-it-solutions.nl' },
 //     { firstName: 'Ali', lastName: 'Bakir', email: 'Ali.Bakir@loop-it-solutions.nl' },
-//     { firstName: 'Nina', lastName: 'Van den Berg', email: 'Nina.VanDenBerg@loop-it-solutions.nl' },
+//     { firstName: 'Nina', lastName: 'Berg', email: 'Nina.Berg@loop-it-solutions.nl' },
 //     { firstName: 'Otis', lastName: 'Kuiper', email: 'Otis.Kuiper@loop-it-solutions.nl' },
 // ]
 // ==========================================
 
 const employees = [
 	{firstName: 'Max', lastName: 'Janssen'},
-	{firstName: 'Sophia', lastName: 'De Vries'},
+	{firstName: 'Sophia', lastName: 'Vries'},
 	{firstName: 'Ali', lastName: 'Bakir'},
-	{firstName: 'Nina', lastName: 'Van den Berg'},
+	{firstName: 'Nina', lastName: 'Berg'},
 	{firstName: 'Otis', lastName: 'Kuiper'},
 ];
 
